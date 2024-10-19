@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {}
+
+.nav-bar {
+    width: 100%;
+    height: 0;
+    /* background-color: black; */
+}
+
+nav {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h4 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav h4:nth-child(1) {
+    letter-spacing: 1px;
+}
+
+nav h4:nth-child(2) {
+    color: rgb(240, 213, 7);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+nav h4:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.hero-section img {
+    height: 600px;
+    width: 450px;
+    object-fit: cover;
+}
+
+.text {
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    font-weight: 900;
+    position: absolute;
+    width: 50%;
+    top: 16%;
+}
+
+
+.scroll-div {
+    position: absolute;
+    top: 27%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: -1;
+
+}
+
+.scroll-div::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-div h1 {
+    margin-right: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-size: 130px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    animation: scroll 2s infinite linear reverse;
+}
+
+
+
+.scroll-div2 {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 0;
+}
+
+.scroll-div2::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-div2 h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    margin-right: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-size: 130px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    animation: scroll 4s infinite linear reverse;
+
+}
+
+
+.scroll-div3 {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: -1;
+}
+
+.scroll-div3::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-div3 h1 {
+    margin-right: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    display: inline-block;
+    font-size: 130px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    animation: scroll 2s infinite linear;
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 30px));
+
+    }
+
+}
