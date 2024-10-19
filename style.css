@@ -145,6 +145,10 @@ nav h4:nth-child(3) {
 
 
 @media (max-width: 900px) {
+    .nav-bar {
+        background-color: #444343;
+        color: white;
+    }
     .hero-section img {
         width: 350px;
         height: 500px;
