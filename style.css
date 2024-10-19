@@ -11,21 +11,19 @@ body {
     height: 100%;
 }
 
-#main {}
-
 .nav-bar {
     width: 100%;
-    height: 0;
-    /* background-color: black; */
 }
 
 nav {
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav h4 {
+    font-size: 1.2vw;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -41,14 +39,13 @@ nav h4:nth-child(2) {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
 nav h4:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-
 }
-
 
 .hero-section {
     width: 100%;
@@ -57,12 +54,14 @@ nav h4:nth-child(3) {
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
 
 .hero-section img {
-    height: 600px;
-    width: 450px;
+    /* height: 600px;
+    width: 450px; */
+    width: 100%;
+    height: auto;
+    max-width: 400px;
     object-fit: cover;
 }
 
@@ -75,82 +74,18 @@ nav h4:nth-child(3) {
     top: 16%;
 }
 
-
-.scroll-div {
-    position: absolute;
-    top: 27%;
-    width: 100%;
-    /* height: 100px; */
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    z-index: -1;
-
-}
-
-.scroll-div::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll-div h1 {
-    margin-right: 30px;
-    font-weight: 900;
-    letter-spacing: -2px;
-    display: inline-block;
-    font-size: 130px;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    animation: scroll 2s infinite linear reverse;
-}
-
-
-
-.scroll-div2 {
-    position: absolute;
-    top: 45%;
-    width: 100%;
-    /* height: 100px; */
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    z-index: 0;
-}
-
-.scroll-div2::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll-div2 h1 {
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    color: transparent;
-    margin-right: 30px;
-    font-weight: 900;
-    letter-spacing: -2px;
-    display: inline-block;
-    font-size: 130px;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    animation: scroll 4s infinite linear reverse;
-
-}
-
-
+.scroll-div,
+.scroll-div2,
 .scroll-div3 {
     position: absolute;
-    top: 60%;
     width: 100%;
-    /* height: 100px; */
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    z-index: -1;
 }
 
-.scroll-div3::-webkit-scrollbar {
-    display: none;
-}
-
+.scroll-div h1,
+.scroll-div2 h1,
 .scroll-div3 h1 {
     margin-right: 30px;
     font-weight: 900;
@@ -159,19 +94,50 @@ nav h4:nth-child(3) {
     font-size: 130px;
     font-family: sans-serif;
     text-transform: uppercase;
-    animation: scroll 2s infinite linear;
+}
 
+.scroll-div {
+    top: 27%;
+    z-index: -1;
+}
+
+.scroll-div::-webkit-scrollbar,
+.scroll-div2::-webkit-scrollbar,
+.scroll-div3::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-div h1 {
+    animation: scroll 2s infinite linear reverse;
+}
+
+.scroll-div2 {
+    top: 45%;
+    z-index: 0;
+}
+
+.scroll-div2 h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    animation: scroll 4s infinite linear reverse;
+}
+
+.scroll-div3 {
+    top: 60%;
+    z-index: -1;
+}
+
+.scroll-div3 h1 {
+    animation: scroll 2s infinite linear;
 }
 
 @keyframes scroll {
     0% {
         transform: translateX(0);
-
     }
 
     100% {
         transform: translateX(calc(-100% - 30px));
-
     }
-
 }
