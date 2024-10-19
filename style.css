@@ -23,7 +23,7 @@ nav {
 }
 
 nav h4 {
-    font-size: 1.2vw;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -57,12 +57,11 @@ nav h4:nth-child(3) {
 }
 
 .hero-section img {
-    /* height: 600px;
-    width: 450px; */
     width: 100%;
     height: auto;
     max-width: 400px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .text {
@@ -72,6 +71,7 @@ nav h4:nth-child(3) {
     position: absolute;
     width: 50%;
     top: 16%;
+    text-align: center;
 }
 
 .scroll-div,
@@ -87,19 +87,15 @@ nav h4:nth-child(3) {
 .scroll-div h1,
 .scroll-div2 h1,
 .scroll-div3 h1 {
-    margin-right: 30px;
+    margin-right: 2rem;
     font-weight: 900;
     letter-spacing: -2px;
     display: inline-block;
-    font-size: 130px;
+    font-size: 9.1rem;
     font-family: sans-serif;
     text-transform: uppercase;
 }
 
-.scroll-div {
-    top: 27%;
-    z-index: -1;
-}
 
 .scroll-div::-webkit-scrollbar,
 .scroll-div2::-webkit-scrollbar,
@@ -107,13 +103,23 @@ nav h4:nth-child(3) {
     display: none;
 }
 
-.scroll-div h1 {
-    animation: scroll 2s infinite linear reverse;
+.scroll-div {
+    top: 27%;
+    z-index: -1;
 }
 
 .scroll-div2 {
     top: 45%;
     z-index: 0;
+}
+
+.scroll-div3 {
+    top: 62%;
+    z-index: -1;
+}
+
+.scroll-div h1 {
+    animation: scroll 3s infinite linear reverse;
 }
 
 .scroll-div2 h1 {
@@ -123,13 +129,8 @@ nav h4:nth-child(3) {
     animation: scroll 4s infinite linear reverse;
 }
 
-.scroll-div3 {
-    top: 60%;
-    z-index: -1;
-}
-
 .scroll-div3 h1 {
-    animation: scroll 2s infinite linear;
+    animation: scroll 3s infinite linear;
 }
 
 @keyframes scroll {
@@ -140,4 +141,46 @@ nav h4:nth-child(3) {
     100% {
         transform: translateX(calc(-100% - 30px));
     }
+}
+
+
+@media (max-width: 900px) {
+    .hero-section img {
+        width: 350px;
+        height: 500px;
+    }
+
+    .text {
+        font-size: 1.8vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+    nav h4 {
+        font-size: 2.5vw;
+    }
+
+    .hero-section img {
+        width: 250px;
+        height: 400px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 3vw;
+    }
+
+    .scroll-div h1,
+    .scroll-div2 h1,
+    .scroll-div3 h1 {
+        font-size: 20vw;
+    }
+}
+@media (max-width: 300px) {
+    .hero-section img {
+        width: 200px;
+        height: 300px;
+    }
+
 }
